@@ -1,0 +1,36 @@
+﻿@using TaskDay3.Models
+@model List<Employee>
+
+<h3>List of all Employees</h3>
+<hr />
+
+<a href="/Employee/Create">Create New</a>
+
+<table border="2" width="900">
+    <tr>
+        <th>EmpNo</th>
+        <th>Employee Name</th>
+        <th>Employee Gender</th>
+        <th>Employee Salary</th>
+        <th>Employee Address</th>
+        <th></th>
+    </tr>
+
+    @foreach (Employee Employeee in Model)
+    {
+        <tr>
+            <td>@Employeee.EmpNo</td>
+            <td>@Employeee.Name</td>
+            <td>@Employeee.Gender</td>
+            <td>@Employeee.Salary</td>
+            <td>@Employeee.Address</td>
+            <td>
+                <a href="/home/Details/@Employeee.EmpNo">Details</a> |
+                <a href="/home/Edit/@Employeee.EmpNo">Edit</a> |
+                <a href="/home/Delete/@Employeee.EmpNo">Delete</a>
+            </td>
+        </tr>
+    }
+
+
+</table>
