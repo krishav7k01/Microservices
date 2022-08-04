@@ -1,0 +1,54 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Customers",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44370
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/CustomersService",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customers/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44370
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/CustomersService/{id}",
+      "UpstreamHttpMethod": [ "GET", "Put","DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Drivers",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44332
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/DriversService",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Driver/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44332
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/DriverService/{id}",
+      "UpstreamHttpMethod": [ "GET","Put" ,"DELETE" ]
+    }
+  ]
+
+  }
+
