@@ -1,5 +1,5 @@
 {
-  "Routes": [
+  "ReRoutes": [
     {
       "DownstreamPathTemplate": "/api/Customers",
       "DownstreamScheme": "https",
